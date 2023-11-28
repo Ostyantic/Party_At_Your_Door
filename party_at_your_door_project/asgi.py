@@ -1,5 +1,5 @@
 """
-ASGI config for _project project.
+ASGI config for party_at_your_door_project project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', '_project.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'party_at_your_door_project.settings')
 
 application = get_asgi_application()
