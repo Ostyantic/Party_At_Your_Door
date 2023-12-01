@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'queueapp',
 
     # 3rd party apps
-    'rest_framework'
+    'rest_framework',
+    'compressor'
 ]
 
 MIDDLEWARE = [
@@ -132,3 +133,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Customer User Model setting
 AUTH_USER_MODEL = "accounts.CustomUser"
+
+# Tailwind / Compressor settings
+
+COMPRESS_ROOT = BASE_DIR / 'static'
+
+COMPRESS_ENABLED = True
+
+STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
