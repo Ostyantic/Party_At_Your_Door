@@ -5,4 +5,6 @@ class HomePageView(TemplateView):
     template_name = 'home.html'
 
 
-# Create your views here.
+class BookMeView(TemplateView):
+    template_name = 'bookme.html'
+
