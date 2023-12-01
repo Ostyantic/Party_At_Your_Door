@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
 
+{# HEADER #}
+{% block header %}
+    <h1>WELCOME TO THE PARTY</h1>
+    <nav>
+        <a href="{% url 'bookme' %}">Book Me</a>
+    </nav>
+{% endblock header %}
+
+{# MAIN #}
 {% block content %}
 
     <h2>PARTY AT YOUR DOOR IMAGE</h2>
