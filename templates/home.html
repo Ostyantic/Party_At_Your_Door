@@ -6,11 +6,11 @@
 
 
 
-<nav class="pt-8 bg-p1 text-g1">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="{% url 'home' %}" class="flex items-center space-x-3 rtl:space-x-reverse">
+<nav class="text-center pt-8 text-g1">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-around mx-auto p-4">
+    <a href="{% url 'home' %}" class="flex items-center rtl:space-x-reverse">
 {#        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />#}
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">PARTY AT YOUR DOOR</span>
+        <span class="m-auto self-center text-2xl font-semibold whitespace-nowrap dark:text-white">WELCOME TO THE PARTY</span>
     </a>
     <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden" aria-controls="navbar-default" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
@@ -18,53 +18,78 @@
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
         </svg>
     </button>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+    <div class="hidden w-full" id="navbar-default">
+      <ul class="font-medium flex flex-col md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
         <li>
-          <a href="{% url 'bookme' %}">Book Me</a>
+          <a href="{% url 'home' %}">Book Me</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-{#    <h1>WELCOME TO THE PARTY</h1>#}
-{#    <nav>#}
-{#        <a href="{% url 'bookme' %}">Book Me</a>#}
-{#    </nav>#}
+
 {% endblock header %}
 
 {# MAIN #}
 {% block content %}
-    <div class="bg-cover bg-fixed bg-no-repeat bg-center h-screen min-h-0 " style="background-image: url('{% static 'images/Background.jpg' %}'); background-position-x: 80%;">
-        <h2>PARTY AT YOUR DOOR IMAGE</h2>
+    <div class="border-2 border-white mt-20 flex flex-col items-center">
+        {#    Sign-up instructions    #}
+{#        <section class="flex flex-col border-2 border-blue-400">#}
+{#            <h2>HOW TO SIGN-UP</h2>#}
+{#            <span> 1. FIND your song choice on YouTube.</span>#}
+{#            <span> 2. COPY the link from the YouTube page.</span>#}
+{#            <span> 3. CLICK on "Add Name" and PASTE the song’s link.</span>#}
+{#        </section>#}
 
-        <div>
+        <img class="w-10/12 p-4 pl-12" src="{% static 'images/partyatyourdoorimage.png' %}">
+        <div class="w-full flex flex-col items-center space-y-5 border-2 border-pink-500">
 
-    {#    Sign-up instructions    #}
-            <section>
-                <h2>HOW TO SIGN-UP</h2>
-                <span> 1. FIND your song choice on YouTube.</span>
-                <span> 2. COPY the link from the YouTube page.</span>
-                <span> 3. CLICK on "Add Name" and PASTE the song’s link.</span>
-            </section>
 
     {#    Song Queue    #}
-            <section>
-                <h2>SONG QUEUE</h2>
+            <section class="w-11/12 flex flex-col items-center justify-around border-2 border-green-400 bg-gradient-to-b from-p1 to-p2">
 
-                <div>
-                    <div>
-                        <span>#</span>
-                        <span>Name</span>
-                        <span>Song</span>
+                <p class="text-center p-4 text-2xl text-g1">SONG QUEUE</p>
+                <div class="w-full flex flex-col bg-black mx-24 p-2 space-y-2">
+                    <div class="flex justify-evenly text-o1 bg-black border-2 border-g1">
+                            <span>#</span>
+                            <span>Name</span>
+                            <span>Song Name</span>
+                    </div>
+
+                    {# queue of users place, name, song #}
+                    <div class="flex flex-col space-y-2">
+                        <div class="flex justify-between bg-g1 text-p1">
+                            <div class="w-full flex  justify-evenly">
+                                <span>1</span>
+                                <p>John Doe</p>
+                                <span>Link</span>
+                            </div>
+                            <button>EDIT</button>
+                        </div>
+                        <div class="flex justify-between bg-p1 text-o1">
+                            <div class="w-full flex  justify-evenly">
+                                <span>2</span>
+                                <p>Jane Doe</p>
+                                <span>Link</span>
+                            </div>
+                            <button>EDIT</button>
+                        </div>
+                        <div class="flex justify-between bg-p1 text-o1">
+                            <div class="w-full flex  justify-evenly">
+                                <span>3</span>
+                                <p>Thomas Doe</p>
+                                <span>Link</span>
+                            </div>
+                            <button>EDIT</button>
+                        </div>
                     </div>
                 </div>
 
             </section>
 
             {#  Sign-up button  #}
-            <button>Sign Me Up!</button>
+            <button class="border-2 border-g1 bg-p1 text-g1 p-4">Sign Me Up!</button>
         </div>
     </div>
 
