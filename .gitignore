@@ -123,3 +123,6 @@ poetry.lock
 
 # static
 static
+
+# database
+db.sqlite3
