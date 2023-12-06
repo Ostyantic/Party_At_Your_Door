@@ -6,4 +6,6 @@ class Singer(models.Model):
     name = models.CharField(max_length=20)
     song_name = models.CharField(max_length=256)
 
-# Create your models here.
+    def __str__(self):
+        return self.name
+
